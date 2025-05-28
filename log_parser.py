@@ -79,14 +79,14 @@ def ExtractFeatures(method,path_enc,body_enc,headers):
     raw_input('>>>')
         
      
-f = open('httplogbad.csv', "w")
+f = open('httplogs.csv', "w")
 c = csv.writer(f)
 c.writerow(["method","path","body","single_q","double_q","dashes","braces","spaces","badwords","class"])
 f.close()
 lp = LogParse()
 result = lp.parse_log(log_path)
 
-f = open('httplogbad.csv', "a")
+f = open('bad_req_http.csv', "a")
 c = csv.writer(f)
 for items in result:
     data=[]
